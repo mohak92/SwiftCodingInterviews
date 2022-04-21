@@ -8,7 +8,7 @@ func findLength(_ s: String) -> Int {
     var charIndexMap = [Character: Int]();
     
     for windowEnd in 0 ..< str.count {
-        var rightChar: Character = str[windowEnd];
+        let rightChar: Character = str[windowEnd];
         
         if charIndexMap.keys.contains(rightChar) {
             windowStart = max(windowStart, charIndexMap[rightChar]! + 1);
