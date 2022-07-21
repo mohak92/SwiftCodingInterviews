@@ -13,7 +13,7 @@ func findLength(_ s: String, _ k: Int) -> Int {
         while charFreqMap.count > k {
             let leftChar: Character = str[windowStart];
             charFreqMap[leftChar, default: 0] -= 1;
-            if let count = charFreqMap[leftChar], count == 0 {
+            if charFreqMap[leftChar] == 0 {
                 charFreqMap[leftChar] = nil;
             }
             windowStart += 1;
